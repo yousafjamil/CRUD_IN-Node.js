@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./navbar')  %> 
+
+<div class="container py-5 m-5">
+    <div class="row">
+        <div class="col-sm-12">
+
+        <table class="table">
+<thead>
+    <th>User name</th>
+    <th>User Email</th>
+    <th>User salary</th>
+    <th>User Role</th>
+    <th>Delete</th>
+    <th>Edit</th>
+</thead>
+<tbody>
+    
+
+         <% AllUser.forEach(user => { %>
+            <tr>
+            <td><%= user.name %>  </td>
+            <td><%= user.email %>  </td>
+            <td><%= user.salary %>  </td>
+            <td><%= user.role %>  </td>
+            <td class="btn btn-danger">
+             <a href="/DeteteUser/<%= user._id %>">
+               Delete
+            </a>  
+        </td>
+           <td><a href="/Edituser/<%= user._id %>" class="btn btn-primary btn-md">Edit</a> </td>
+        </tr>
+         <% }) %>
+
+       
+   
+    
+</tbody>
+
+        </table>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

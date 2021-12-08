@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/style.css">
+    <title>User detail </title>
+<style>
+   
+
+</style>
+
+</head>
+<body>
+<%- include('./navbar')  %> 
+
+<div  class="container py-5">
+   <div class="row">
+       <h3>Edit User</h3>
+       <div class="col-sm-10">
+        <form  action="/update/<%=EditUser.id  %>"  method="post" class="jumbotron">
+        
+<div>
+    <label >Name</label>
+    <input     name='name' type="text"  class="form-control" value="<%=EditUser.name  %> "/>
+</div>       
+<div>
+    <label >Email</label>
+    <input  name='email' type="email"  class="form-control" value="<%=EditUser.email  %> "/>
+</div> 
+ <div>
+  <label >Salary</label>
+ <input  name='salary' type="number"   class="form-control" value="<%=EditUser.salary  %> "/>   
+</div>
+            <div>
+                <label >Role</label>
+                <input    name='role' type="text"  class="form-control" value="<%=EditUser.role  %> " /><br/>
+            </div>
+       
+            <button class="btn btn-info w-25" >Submit </button>
+        </form>
+       </div>
+   </div>
+</div>
+    
+</body>
+</html>
